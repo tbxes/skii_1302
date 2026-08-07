@@ -18,7 +18,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private int hp;
-    private int HP { get { return hp; } set { hp = value; }  }
+    public int HP { get { return hp; } set { hp = value; } }
+
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
