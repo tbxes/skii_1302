@@ -16,19 +16,19 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-       Instance = this;
+        Instance = this;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ShowNotiText(string s)
@@ -38,7 +38,11 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
+
         player.transform.position = new Vector3(0f, 88f, -86.5f);
+
+        player.transform.position = new Vector3(0, 88, -86.2f);
+
         player.HP = 100;
         ShowNotiText("Restart ka");
         Time.timeScale = 1f;
@@ -49,4 +53,5 @@ public class UIManager : MonoBehaviour
     {
         restartButton.SetActive(flag);
     }
+
 }
