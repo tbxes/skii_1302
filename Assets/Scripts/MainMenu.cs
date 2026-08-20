@@ -5,7 +5,8 @@ public class MainM : MonoBehaviour
 {
     public void Startgame()
     {
-        SceneManager.LoadScene("Scene01");
+        
+        SceneManager.LoadScene("Loading");
     }
 
     public void Exit()
