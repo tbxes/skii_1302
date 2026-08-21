@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour
 {
+
+    AuduiManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AuduiManager>();
+    }
+
     private MeshRenderer rd;
 
 
@@ -19,6 +26,8 @@ public class Tree : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        audioManager.PlaySFX(audioManager.hit);
+
         rd.material.color = Color.red;
 
         Player player = collision.gameObject.GetComponent<Player>();

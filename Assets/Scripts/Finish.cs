@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
+
+    AuduiManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AuduiManager>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +23,8 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        audioManager.PlaySFX(audioManager.eating);
+
         Player p = other.GetComponent<Player>();
 
         if (p == null)
